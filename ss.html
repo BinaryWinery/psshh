@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Radio Button Selection</title>
+</head>
+<body>
+
+  <h3>Select a color:</h3>
+  <label><input type="radio" name="color" value="Red" checked> Red</label><br>
+  <label><input type="radio" name="color" value="Green"> Green</label><br>
+  <label><input type="radio" name="color" value="Blue"> Blue</label><br>
+
+  <button onclick="logSelectedValue()">Submit</button>
+
+  <script>
+    function logSelectedValue() {
+      const selected = document.querySelector('input[name="color"]:checked');
+      if (selected) {
+        console.log("Selected value:", selected.value);
+      } else {
+        console.log("No value selected.");
+      }
+    }
+  </script>
+
+</body>
+</html>
